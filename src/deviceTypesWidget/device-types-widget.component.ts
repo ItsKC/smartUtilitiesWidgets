@@ -53,15 +53,19 @@ export class DeviceTypesWidget {
 		},
 		plugins: {
 		  datalabels: {
+			color: 'white',
 			formatter: (value, ctx) => {
-				let sum = 0;
-				let dataArr = ctx.chart.data.datasets[0].data;
-				dataArr.forEach(data => {
-					sum += data;
-				});
+				if(value >0) {
+					let sum = 0;
+					let dataArr = ctx.chart.data.datasets[0].data;
+					dataArr.forEach(data => {
+						sum += data;
+					});
 
-				let percentage = (value*100 / sum).toFixed(2)+"%";
-				return percentage;
+					let percentage = (value*100 / sum).toFixed(2)+"%";
+					return percentage;
+				}
+					return "";
 			},
 		  },
 		}
@@ -73,7 +77,7 @@ export class DeviceTypesWidget {
 		this.pieChartPlugins = [pluginDataLabels];
 		this.pieChartColors = [
 		{
-		  backgroundColor: ['rgba(255,0,0,0.3)', 'rgba(0,255,0,0.3)', 'rgba(0,0,255,0.3)', 'rgba(0,0,255,0.3)'],
+		  backgroundColor: ['#325A9B', '#9B2C84', '#18CF0D', '#CF0D4E'],
 		},
 		];	
 		// subscribe

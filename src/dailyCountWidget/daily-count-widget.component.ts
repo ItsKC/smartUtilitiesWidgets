@@ -71,7 +71,9 @@ export class DailyCountWidget {
 		this.lineChart2Data = [
 			{
 				data: [15, 36, 110, 50, 65, 31, 70],
-				fill: false
+				fill: false,
+				pointHoverBorderColor: 'blue',
+				pointHoverBorderWidth : '3'
 			}
 		];
 		this.lineChart2Labels = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'];
