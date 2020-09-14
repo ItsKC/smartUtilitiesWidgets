@@ -1,0 +1,30 @@
+<c8y-dashboard-child-header>
+        <span styles="background-color:yellow;">Transparent!</span>
+ </c8y-dashboard-child-header>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+       {{devArr[0]}}
+    </div>
+    <div class="panel-body">
+        <label>İş Emirleri</label>
+        <div class="input-group">
+            <select class="form-control"  [(ngModel)]="selectedStatus" (ngModelChange)=onChange($event.name) >
+                <option *ngFor="let s of operationList" [ngValue]="s">{{s.name}}</option>
+            </select>
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="submit" (click)="sendOperation()"> İş Emri Oluştur </button>
+            </span>
+        </div>
+    </div>
+	<div class="panel-body">		
+		<label *ngIf="!isHidden">Kredi Miktarı </label>
+		<div class="input-group" *ngIf="!isHidden">
+			<input [(ngModel)]="creditValue" type="text">
+		</div>
+	</div>
+    <div class="panel-footer">
+        <p *ngIf="isHidden"><span>Cihaz Vanası: </span><b>{{devArr[1]}}</b></p>
+		<p *ngIf="!isHidden"><span>Mevcut Kredi: </span><b>{{devArr[1]}}</b></p>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+ <div class="card text-white bg-info" style="margin-left:10px; margin-right:10px;">
+	<div class="card-body pb-0">
+	  <div>Haftalık Toplam</div>
+	  <div class="text-value">{{ sum() }}</div>
+	</div>
+	<div class="chart-wrapper mt-3 mx-3" style="height:110px;">
+	  <canvas baseChart class="chart"
+	  [datasets]="lineChart2Data"
+	  [labels]="lineChart2Labels"
+	  [options]="lineChart2Options"
+	  [colors]="lineChart2Colours"
+	  [legend]="lineChart2Legend"
+	  [chartType]="lineChart2Type"></canvas>
+	</div>
+  </div>
+  &nbsp;

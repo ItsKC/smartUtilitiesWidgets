@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      Aftiflik Durumuna Göre Cihazlar
+    </div>
+    <div class="panel-body">
+      <div class="chart">
+        <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [colors]="pieChartColors"
+          [legend]="pieChartLegend">
+        </canvas>
+      </div>
+    </div>
+    <div class="panel-footer">
+        Toplam: {{ sum() }}
+    </div>
+</div>
