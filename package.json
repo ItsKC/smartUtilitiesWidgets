@@ -1,5 +1,5 @@
 {
-  "name": "cockpit",
+  "name": "smartutilities",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -48,13 +48,12 @@
   },
   "c8y": {
     "application": {
-      "name": "cockpit",
-      "contextPath": "cockpit",
-      "key": "cockpit-application-key",
+      "name": "smartutilities",
+      "contextPath": "smartutilities",
+      "key": "smartutilities-application-key",
       "tabsHorizontal": true,
       "upgrade": true,
       "rightDrawer": true,
-      "brandingEntry": "./branding/branding.less",
       "globalTitle": "TURKCELL IoT Platform",
       "sensorAppOneLink": "http://onelink.to/pca6qe",
       "contentSecurityPolicy": "base-uri 'none'; default-src 'self' 'unsafe-inline' http: https: ws: wss:; connect-src 'self' *.billwerk.com http: https: ws: wss:;  script-src 'self' open.mapquestapi.com *.twitter.com *.twimg.com 'unsafe-inline' 'unsafe-eval' data:; style-src * 'unsafe-inline' blob:; img-src * data:; font-src * data:; frame-src *;"
