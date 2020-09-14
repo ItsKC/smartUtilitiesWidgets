@@ -1,5 +1,5 @@
 {
-  "name": "smartutilities",
+  "name": "cockpit",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -48,9 +48,9 @@
   },
   "c8y": {
     "application": {
-      "name": "smartutilities",
-      "contextPath": "smartutilities",
-      "key": "smartutilities-application-key",
+      "name": "cockpit",
+      "contextPath": "cockpit",
+      "key": "cockpit-application-key",
       "tabsHorizontal": true,
       "upgrade": true,
       "rightDrawer": true,
