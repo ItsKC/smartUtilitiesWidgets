@@ -12,13 +12,17 @@ export class OperationsWidgetService{
 	  pageSize: number;
 	};
 	private deviceInfo: string[];
+	private creditInfo: number;
 	private subject: Subject<any> = new Subject<any>();
 	public subjectObs = this.subject.asObservable();
+	private measurementSubject: Subject<any> = new Subject<any>();
+	public subjectMeasurementObs = this.measurementSubject.asObservable();
 	
 	constructor( private inventory: InventoryService, private realtime: Realtime, private operations: OperationService,
 		private measurements: MeasurementService) 
     {
 		this.deviceInfo = [];
+		this.creditInfo = 0;
 	}
 	// Get Device Name and Valve Status
 	async loadDeviceInfo(source){
@@ -51,14 +55,16 @@ export class OperationsWidgetService{
 			result = nextPage.data;
 			page = nextPage.paging;
 		}
-		console.log(result);
+		this.fillCreditInfo(result[result.length-1]);
 	}
 	// Subscribe and Update Real Time Credit Measurement 
 	async loadCreditInfoRealTime(source){
 		const subscription = this.realtime.subscribe('/measurements/' + source, (data) => {
 			if(data.data.data.hasOwnProperty('Kredi')){
-				// TODO
+				console.log("real time");
+				this.fillCreditInfo(data.data.data);
 			}	
+			console.log(data);
 		})
 	}
 	// Create Load Credit Operation
@@ -94,5 +100,10 @@ export class OperationsWidgetService{
 		this.deviceInfo[0] = data.name;
 		this.deviceInfo[1] = data.VanaDurumu;
 		this.subject.next({arr: this.deviceInfo});
+	}
+	fillCreditInfo(data){
+		this.creditInfo = (data.Kredi.bakiye.value);
+		console.log(this.creditInfo);
+		this.measurementSubject.next({credit: this.creditInfo});
 	}
 }

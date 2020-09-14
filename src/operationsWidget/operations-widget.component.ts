@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class OperationsWidget {
   @Input() config;
   subscription: Subscription;
+  subscriptionCredit: Subscription;
   private href: string;
   private source: string;
   private operationList: any[];
@@ -20,6 +21,7 @@ export class OperationsWidget {
   };
   private appliedStatus: {};
   private devArr: string[];
+  private devCredit: number;
   private isHidden: boolean;
   private creditValue: string;
   
@@ -41,6 +43,7 @@ export class OperationsWidget {
 		this.isHidden = true;
 		this.source = "";
 		this.devArr = [];
+		this.devCredit = 0;
 		this.creditValue = "";
 	}
 
@@ -49,9 +52,13 @@ export class OperationsWidget {
 		this.subscription = this.service.subjectObs.subscribe((stats) => {
 			this.devArr = stats.arr;
 		});
+		this.subscriptionCredit = this.service.subjectMeasurementObs.subscribe((stats) => {
+			this.devCredit = stats.credit;
+		});
 		this.service.loadDeviceInfo(this.source);
 		this.service.loadDeviceInfoRealTime(this.source);
 		this.service.loadCredit(this.source);
+		this.service.loadCreditInfoRealTime(this.source);
 	}
 	
 	sendOperation(){
