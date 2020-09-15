@@ -77,7 +77,7 @@ export class DeviceTypesWidget {
 		this.pieChartPlugins = [pluginDataLabels];
 		this.pieChartColors = [
 		{
-		  backgroundColor: ['#325A9B', '#9B2C84', '#18CF0D', '#CF0D4E'],
+		  backgroundColor: ['#325A9B', '#9B2C84', '#18CF0D', '#CF0D4E', '#cccf19', '#44915a', '#8e74e3', '#700421', '#e8dada', '#446291'],
 		},
 		];	
 		// subscribe
