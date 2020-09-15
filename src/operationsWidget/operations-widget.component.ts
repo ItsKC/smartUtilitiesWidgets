@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'operations-widget',
   templateUrl: './operations-widget.html',
-  styleUrls: ['../styles/bootstrap.min.css']
+  styleUrls: ['../styles/bootstrap.min.css', './operations-widget.css']
 })
 export class OperationsWidget {
   @Input() config;
