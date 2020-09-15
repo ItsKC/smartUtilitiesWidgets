@@ -77,7 +77,7 @@ export class ActiveStatusWidget {
 		this.pieChartPlugins = [pluginDataLabels];
 		this.pieChartColors = [
 		{
-		  backgroundColor: ['#1AEF0C', '#EF320C'],
+		  backgroundColor: ['#CF0D4E', '#325A9B'],
 		},
 	  ];
 		// subscription starts here
