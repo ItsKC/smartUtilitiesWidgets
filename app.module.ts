@@ -14,6 +14,9 @@ import { OpenStatusWidgetService } from './src/openStatusWidget/open-status-widg
 import { DailyCountWidget } from './src/dailyCountWidget/daily-count-widget.component';
 import { DailyCountWidgetConfig } from './src/dailyCountWidget/daily-count-config.component';
 import { DailyCountWidgetService } from './src/dailyCountWidget/daily-count-widget.service';
+import { MonthlyCountWidget } from './src/monthlyCountWidget/monthly-count-widget.component';
+import { MonthlyCountWidgetConfig } from './src/monthlyCountWidget/monthly-count-config.component';
+import { MonthlyCountWidgetService } from './src/monthlyCountWidget/monthly-count-widget.service';
 import { OperationsWidget } from './src/operationsWidget/operations-widget.component';
 import { OperationsWidgetConfig } from './src/operationsWidget/operations-config.component';
 import { OperationsWidgetService } from './src/operationsWidget/operations-widget.service';
@@ -42,10 +45,10 @@ import { ChartsModule, ThemeService } from 'ng2-charts';
   ],
   declarations: [ActiveStatusWidget, ActiveStatusWidgetConfig, DeviceTypesWidget, DeviceTypesWidgetConfig,
 	OpenStatusWidget, OpenStatusWidgetConfig, DailyCountWidget, DailyCountWidgetConfig, OperationsWidget, 
-	OperationsWidgetConfig],      
+	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig],      
   entryComponents: [ActiveStatusWidget, ActiveStatusWidgetConfig, DeviceTypesWidget ,DeviceTypesWidgetConfig, 
 	OpenStatusWidget, OpenStatusWidgetConfig, DailyCountWidget, DailyCountWidgetConfig, OperationsWidget,
-	OperationsWidgetConfig],
+	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig],
   providers: [{
     provide: HOOK_COMPONENT,                         
     multi: true,
@@ -84,10 +87,21 @@ import { ChartsModule, ThemeService } from 'ng2-charts';
     multi: true,
     useValue: {
       id: 'daily.count.widget',                         
-      label: 'Günlük Kaydolan Cihazlar',
-      description: 'Bugün ve dün kaydolan cihaz sayısını gösterir.',
+      label: 'Haftalık Cihaz Kaydı',
+      description: 'Haftalık kaydolan cihaz grafiğini görmenizi sağlar.',
       component: DailyCountWidget,                         
       configComponent: DailyCountWidgetConfig,
+    }
+  },
+  {
+    provide: HOOK_COMPONENT,                         
+    multi: true,
+    useValue: {
+      id: 'monthly.count.widget',                         
+      label: 'Ay Bazında Kaydolan Cihazlar',
+      description: 'Ay bazında kaydolan cihaz sayısı grafiğini görmenizi sağlar.',
+      component: MonthlyCountWidget,                         
+      configComponent: MonthlyCountWidgetConfig,
     }
   },
   {
@@ -106,6 +120,7 @@ import { ChartsModule, ThemeService } from 'ng2-charts';
   DeviceTypesWidgetService,
   OpenStatusWidgetService,
   DailyCountWidgetService,
+  MonthlyCountWidgetService,
   OperationsWidgetService
   ]
 })
