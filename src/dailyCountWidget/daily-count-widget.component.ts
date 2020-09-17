@@ -20,9 +20,8 @@ export class DailyCountWidget {
   private lineChart2Legend: boolean;
   private lineChart2Type: string;
   
-    constructor( private demo: DailyCountWidgetService ) {
+    constructor( private service: DailyCountWidgetService ) {
 	  // Load last measurements on every creation of this object
-	  console.log("Daily Count Widget Geldi");
 	}
 	
 	ngOnInit(){
@@ -47,7 +46,7 @@ export class DailyCountWidget {
 			ticks: {
 			  display: false,
 			  min: 1,
-			  max: 120
+			  max: 10
 			}
 		  }],
 		},
@@ -70,7 +69,7 @@ export class DailyCountWidget {
 	  };
 		this.lineChart2Data = [
 			{
-				data: [15, 36, 110, 50, 65, 31, 70],
+				data: [4, 4, 2, 1, 1, 6, 2],
 				fill: false,
 				pointBorderColor: "#321fdb",
 				pointBackgroundColor: "#321fdb",
