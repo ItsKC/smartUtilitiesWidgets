@@ -47,7 +47,7 @@ export class MonthlyCountWidget {
 			ticks: {
 			  display: false,
 			  min: 1,
-			  max: 120
+			  max: 60
 			}
 		  }],
 		},
