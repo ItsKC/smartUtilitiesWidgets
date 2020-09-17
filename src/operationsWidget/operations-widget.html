@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <div class="panel-content-center">
+        <div>
             {{devArr[0]}}
         </div>
     </div>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="panel-footer">
-        <div class="panel-content-center">
+        <div>
             <p *ngIf="isHidden"><span>Cihaz Vanası: </span><b>{{devArr[1]}}</b></p>
             <p *ngIf="!isHidden"><span>Mevcut Kredi: </span><b>{{devCredit}}</b></p>
         </div>
