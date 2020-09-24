@@ -96,7 +96,9 @@ export class DeviceTypesWidget {
 			this.ratio = [0,0,0,0];
 			this.labels = ["Nb-Iot", "Lora", "Gprs", "Rf"];
 			for (let i = 0; i<this.devArr.length; i++){
-				if (this.devArr[i].stat.toLowerCase().includes("nb-iot")){
+				if(!this.devArr[i].stat){
+				}
+				else if (this.devArr[i].stat.toLowerCase().includes("nb-iot")){
 					this.ratio[0]++;
 				}
 				else if (this.devArr[i].stat.toLowerCase().includes("lora")){
@@ -122,7 +124,6 @@ export class DeviceTypesWidget {
 				    this.labels.push(this.devArr[i].stat);
 				}
 			}
-			console.log(this.ratio);
 		}
 			  // events
 	  public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
