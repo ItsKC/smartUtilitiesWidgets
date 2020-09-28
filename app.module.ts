@@ -26,6 +26,10 @@ import { AssetsNavigatorModule } from '@c8y/ngx-components/assets-navigator';
 import { ReportsModule } from '@c8y/ngx-components/reports';
 import { ContextDashboardModule } from '@c8y/ngx-components/context-dashboard';
 import { ChartsModule, ThemeService } from 'ng2-charts';
+import { DeviceNameWidget } from './src/deviceNameWidget/device-name-widget.component';
+import { DeviceNameWidgetConfig } from './src/deviceNameWidget/device-name-config.component';
+import { FlipCardModule } from './src/flip-card/flip-card.module';
+
 
 @NgModule({
   imports: [
@@ -39,16 +43,17 @@ import { ChartsModule, ThemeService } from 'ng2-charts';
     ReportsModule,
     NgUpgradeModule,
     ContextDashboardModule,
+    FlipCardModule,
 	ChartsModule,
     // Upgrade module must be the last
     UpgradeModule
   ],
   declarations: [ActiveStatusWidget, ActiveStatusWidgetConfig, DeviceTypesWidget, DeviceTypesWidgetConfig,
 	OpenStatusWidget, OpenStatusWidgetConfig, DailyCountWidget, DailyCountWidgetConfig, OperationsWidget, 
-	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig],      
+	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig],      
   entryComponents: [ActiveStatusWidget, ActiveStatusWidgetConfig, DeviceTypesWidget ,DeviceTypesWidgetConfig, 
 	OpenStatusWidget, OpenStatusWidgetConfig, DailyCountWidget, DailyCountWidgetConfig, OperationsWidget,
-	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig],
+	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig],
   providers: [{
     provide: HOOK_COMPONENT,                         
     multi: true,
@@ -102,6 +107,17 @@ import { ChartsModule, ThemeService } from 'ng2-charts';
       description: 'Ay bazında kaydolan cihaz sayısı grafiğini görmenizi sağlar.',
       component: MonthlyCountWidget,                         
       configComponent: MonthlyCountWidgetConfig,
+    }
+  },
+    {
+    provide: HOOK_COMPONENT,                         
+    multi: true,
+    useValue: {
+      id: 'device.name.widget',                         
+      label: 'Cihaz Adları',
+      description: 'Ay bazında kaydolan cihaz sayısı grafiğini görmenizi sağlar.',
+      component: DeviceNameWidget,                         
+      configComponent: DeviceNameWidgetConfig,
     }
   },
   {
