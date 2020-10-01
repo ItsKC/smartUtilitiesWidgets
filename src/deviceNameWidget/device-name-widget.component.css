@@ -1,154 +1,105 @@
-.all-device
-{
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  width: 750px;
-  max-width: 100%;
-  margin-top: 40px;
-}
-.all-device .device-card
-{
-  position: relative;
-  background: black;
-  min-height: 180px;
-  width: 180px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+/* Front face */
+/* ---------- */
+
+/* Each box features f.e: money, battery box */
+
+.all-device-box .box{
+    background: #FFF;
+    border-radius: 10px; 
+    padding: 40px 10px;
+    margin: 20px 0px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
 }
 
-.device-card:hover
-{
-    background-color:transparent;
-    transform-style: preserve-3d;
-    transform: scale(1.02);
-    transition: all ease 0.5s;
+/* Each box hover */
+
+.all-device-box .box:hover{
+   box-shadow: 0 0 20px #4183D7;
+   transform-style: preserve-3d;
+   transition: all ease 1s;
 }
 
-.all-device .device-card .details-money
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  transition: 0.2s;
+/* Each box comment text f.e: adet cihazın 2 aydır ödenmemiş borcu bulunmaktadır*/
+
+.all-device-box .box .box-text{
+    margin:20px 0px;
+    font-size: 15px;
+    line-height: 30px;
+    height: 80px;
 }
 
-.card-money
-{
-    position: relative;
-    width: 180px;
-    height: 180px;
-    background: #bdbdbd;
-    overflow: hidden;
-}
+/* Back face */
+/* ---------- */
 
-input, 
-.toggle-money
-{
-    position: absolute;
-    left: 10px;
-    top  : 1px;
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-    outline: none;
-    z-index: 10;
-}
-
-input 
-{
-    opacity: 0;
-    background-color: transparent;
-}
-
-.toggle-money
-{
-    pointer-events: none;
-    border-radius: 50%;
-    background: #fff;
-    transition: 0.5s;
-    text-align: center;
-    line-height: 50px;
-    font-size: 36px;
-    box-shadow: 0 0 0 0px transparent;
-    background-color: transparent;
-}
-
-input:checked ~ .toggle-money 
-{
-    box-shadow: 0 0 0 500px #bdbdbd;
-    transform: rotate(255deg);
-}
-
-.front-end-money,
-.back-end-money
-{
-    position: absolute;
-    top: 20;
-    left: 0;
-    width: 100%;
+.device-info-container {
     height: 100%;
-
-
-}
-
-.back-end-money
-{
-    padding: 20px;
-    box-sizing: border-box;
-    z-index: 11;
-    pointer-events: none;
-    transition: 0.5s;
-    opacity: 0;
-    left : 15px;
-    top  : -20px;
-}
-
-input:checked ~ .back-end-money
-{
-    opacity: 1;
-    transition-delay: 0.5s;
-    background-color: transparent;
-
-}
-
-.back-end-money p
-{
-    margin: 0;
-    padding: 0;
-    color: #fff;
-}
-
-.card-body-money
-{
-    color:white;
+    width: 100%;
     position: absolute;
-    left : 15px;
-    top  : 65px;
+    background: white;
+    z-index: 999;
+    top:0;
+    left:0;
 }
 
-.front-end-money h3
+.device-info-container .fa{
+     color:#4183D7;
+     cursor: pointer; 
+     padding-bottom: 15px; 
+     padding: 10px; 
+     height: 40px;
+}
+
+tr:hover 
+{    
+    box-shadow: 0 0 20px #4183D7;
+    transform-style: preserve-3d;
+    transition: all ease 1s;
+}
+
+.device-info-container .a 
 {
-    font-size: 25px;
+    min-width: 40px;
+    padding: 10px;
 }
 
-.back-end-money .table
+.table-responsive 
 {
-    margin-top: 65px;
-    width: 50%;
-    height: 50%; 
-    margin-left:-30px;
+    height: 100%; 
+    width: 100%;
 }
 
+.row
+{
+    background-color: white; 
+    margin-top: 30px;
+}
 
+.money-box h3 
+{
+    padding-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
+
+.battery-box h3
+{
+    padding-left: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+}
+
+.key-box h3 
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px; 
+}
+
+.fire-box h3
+{
+    padding-right: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px; 
+}

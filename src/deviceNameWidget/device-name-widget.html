@@ -1,322 +1,263 @@
-<body>
-  <div class="card">
-    <div class="card-body" style="background-color: #8a8a8a;">
+<div class="all-device-box">
+  <div class="container">
+    <div class="device-info-container" [ngClass]="{hidden: !showDeviceInfo}">
+      <a href="" (click)="showDeviceInfo=!showDeviceInfo">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </a>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Cihaz Adı</th>
+              <th>Ürün Kodu</th>
+              <th>Ürün Tipi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Pitt</td>
+              <td>35</td>
+              <td>Apple</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Pitt</td>
+              <td>35</td>
+              <td>Apple</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Pitt</td>
+              <td>35</td>
+              <td>Apple</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Pitt</td>
+              <td>35</td>
+              <td>Apple</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Pitt</td>
+              <td>35</td>
+              <td>Apple</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Pitt</td>
+              <td>35</td>
+              <td>Apple</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Pitt</td>
+              <td>35</td>
+              <td>Apple</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>Pitt</td>
+              <td>35</td>
+              <td>Apple</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Kürşat</td>
+              <td>0900</td>
+              <td>At</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-      <div class="all-device">
-        <div class="device-card">
-          <div class="card-money">
-            <input type="checkbox" name="">
-            <div class="toggle-money">
-              <i class="fa fa-money" style="color: white;" aria-hidden="true"></i>
-            </div>
-            <div class="front-end-money">
-                <div class="card-body-money pt-0">
-                  <h5><h3><strong>20</strong></h3><br> adet cihazın 2 aydır ödenmemiş borcu bulunmaktadır</h5>
-                </div>
-            </div>
-            
-            <div class="back-end-money">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" style="color: white;">Cihaz Adı</th>
-                    <th scope="col" style="color: white;">Ürün Kodu</th>
-                    <th scope="col" style="color: white;">Ürün Tipi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma2</td>
-                    <td>Armut2</td>
-                    <td>Çilek2</td>
-                  </tr>
-                  <tr>
-                    <td>Elma3</td>
-                    <td>Armut3</td>
-                    <td>Çilek3</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div> 
-        </div>
-        <div class="device-card">
-          <div class="card-money">
-            <input type="checkbox" name="">
-            <div class="toggle-money">
-              <i class="fa fa-money" style="color: white;" aria-hidden="true"></i>
-            </div>
-            <div class="front-end-money">
-                <div class="card-body-money pt-0">
-                  <h5><h3><strong>20</strong></h3><br> adet cihazın 2 aydır ödenmemiş borcu bulunmaktadır</h5>
-                </div>
-            </div>
-            
-            <div class="back-end-money">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" style="color: white;">Cihaz Adı</th>
-                    <th scope="col" style="color: white;">Ürün Kodu</th>
-                    <th scope="col" style="color: white;">Ürün Tipi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma2</td>
-                    <td>Armut2</td>
-                    <td>Çilek2</td>
-                  </tr>
-                  <tr>
-                    <td>Elma3</td>
-                    <td>Armut3</td>
-                    <td>Çilek3</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div> 
-        </div>
-        <div class="device-card">
-          <div class="card-money">
-            <input type="checkbox" name="">
-            <div class="toggle-money">
-              <i class="fa fa-money" style="color: white;" aria-hidden="true"></i>
-            </div>
-            <div class="front-end-money">
-                <div class="card-body-money pt-0">
-                  <h5><h3><strong>20</strong></h3><br> adet cihazın 2 aydır ödenmemiş borcu bulunmaktadır</h5>
-                </div>
-            </div>
-            
-            <div class="back-end-money">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" style="color: white;">Cihaz Adı</th>
-                    <th scope="col" style="color: white;">Ürün Kodu</th>
-                    <th scope="col" style="color: white;">Ürün Tipi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma2</td>
-                    <td>Armut2</td>
-                    <td>Çilek2</td>
-                  </tr>
-                  <tr>
-                    <td>Elma3</td>
-                    <td>Armut3</td>
-                    <td>Çilek3</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div> 
-        </div>
-        <div class="device-card">
-          <div class="card-money">
-            <input type="checkbox" name="">
-            <div class="toggle-money">
-              <i class="fa fa-money" style="color: white;" aria-hidden="true"></i>
-            </div>
-            <div class="front-end-money">
-                <div class="card-body-money pt-0">
-                  <h5><h3><strong>20</strong></h3><br> adet cihazın 2 aydır ödenmemiş borcu bulunmaktadır</h5>
-                </div>
-            </div>
-            
-            <div class="back-end-money">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" style="color: white;">Cihaz Adı</th>
-                    <th scope="col" style="color: white;">Ürün Kodu</th>
-                    <th scope="col" style="color: white;">Ürün Tipi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma2</td>
-                    <td>Armut2</td>
-                    <td>Çilek2</td>
-                  </tr>
-                  <tr>
-                    <td>Elma3</td>
-                    <td>Armut3</td>
-                    <td>Çilek3</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div> 
-        </div>
-        <div class="device-card">
-          <div class="card-money">
-            <input type="checkbox" name="">
-            <div class="toggle-money">
-              <i class="fa fa-money" style="color: white;" aria-hidden="true"></i>
-            </div>
-            <div class="front-end-money">
-                <div class="card-body-money pt-0">
-                  <h5><h3><strong>20</strong></h3><br> adet cihazın 2 aydır ödenmemiş borcu bulunmaktadır</h5>
-                </div>
-            </div>
-            
-            <div class="back-end-money">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" style="color: white;">Cihaz Adı</th>
-                    <th scope="col" style="color: white;">Ürün Kodu</th>
-                    <th scope="col" style="color: white;">Ürün Tipi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma2</td>
-                    <td>Armut2</td>
-                    <td>Çilek2</td>
-                  </tr>
-                  <tr>
-                    <td>Elma3</td>
-                    <td>Armut3</td>
-                    <td>Çilek3</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div> 
-        </div>
-        <div class="device-card">
-          <div class="card-money">
-            <input type="checkbox" name="">
-            <div class="toggle-money">
-              <i class="fa fa-money" style="color: white;" aria-hidden="true"></i>
-            </div>
-            <div class="front-end-money">
-                <div class="card-body-money pt-0">
-                  <h5><h3><strong>20</strong></h3><br> adet cihazın 2 aydır ödenmemiş borcu bulunmaktadır</h5>
-                </div>
-            </div>
-            
-            <div class="back-end-money">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" style="color: white;">Cihaz Adı</th>
-                    <th scope="col" style="color: white;">Ürün Kodu</th>
-                    <th scope="col" style="color: white;">Ürün Tipi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma2</td>
-                    <td>Armut2</td>
-                    <td>Çilek2</td>
-                  </tr>
-                  <tr>
-                    <td>Elma3</td>
-                    <td>Armut3</td>
-                    <td>Çilek3</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                  <tr>
-                    <td>Elma</td>
-                    <td>Armut</td>
-                    <td>Çilek</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div> 
+    <div class="row" [ngClass]="{hidden: showDeviceInfo}">
+      <div class="col-lg-6 col-xs-12 text-center">
+        <div class="box">
+          <i class="fa fa-money fa-5x" aria-hidden="true" type="button" name="" (click)="showDeviceInfo=!showDeviceInfo"
+            style="color:#18CF0D;"></i>
+          <div class="money-box">
+            <h3><strong>20</strong></h3>
+          </div>
+          <hr>
+          <div class="box-text">
+            <span>adet cihazın 2 aydır ödenmemiş borcu bulunmaktadır</span>
+          </div>
         </div>
       </div>
 
+      <div class="col-lg-6 col-xs-12 text-center">
+        <div class="box">
+          <i class="fa fa-battery-full fa-5x" aria-hidden="true" type="button" name=""
+            (click)="showDeviceInfo=!showDeviceInfo" style="color: #325A9B;"></i>
+          <div class="battery-box">
+            <h3><strong>6</strong></h3>
+          </div>
+          <hr>
+          <div class="box-text">
+            <span>makinada pil şişmesi sonucu arka kapak açıldı</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-xs-12 text-center">
+        <div class="box">
+          <i class="fa fa-key fa-5x" aria-hidden="true" type="button" name="" (click)="showDeviceInfo=!showDeviceInfo"
+            style="color: #9B2C84;"></i>
+          <div class="key-box">
+            <h3><strong>2</strong></h3>
+          </div>
+          <hr>
+          <div class="box-text">
+            <span>kapakçıkta oluşan bir basınç sebebiyle anahtarlar devre dışı kalmıştır</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-xs-12 text-center">
+        <div class="box">
+          <i class="fa fa-fire-extinguisher fa-5x" aria-hidden="true" type="button" name=""
+            (click)="showDeviceInfo=!showDeviceInfo" style="color: #CF0D4E;"></i>
+          <div class="fire-box">
+            <h3><strong>5</strong></h3>
+          </div>
+          <hr>
+          <div class="box-text">
+            <span>cihazda oksitlenme sonucu yanma oluşmuştur</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</body>
+</div>
