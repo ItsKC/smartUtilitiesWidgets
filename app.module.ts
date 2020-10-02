@@ -29,6 +29,8 @@ import { ChartsModule, ThemeService } from 'ng2-charts';
 import { DeviceNameWidget } from './src/deviceNameWidget/device-name-widget.component';
 import { DeviceNameWidgetConfig } from './src/deviceNameWidget/device-name-config.component';
 import { FlipCardModule } from './src/flip-card/flip-card.module';
+import { DeviceSearchWidget } from './src/deviceSearchWidget/device-search-widget.component';
+import { DeviceSearchWidgetConfig } from './src/deviceSearchWidget/device-search-config.component';
 
 
 @NgModule({
@@ -50,10 +52,10 @@ import { FlipCardModule } from './src/flip-card/flip-card.module';
   ],
   declarations: [ActiveStatusWidget, ActiveStatusWidgetConfig, DeviceTypesWidget, DeviceTypesWidgetConfig,
 	OpenStatusWidget, OpenStatusWidgetConfig, DailyCountWidget, DailyCountWidgetConfig, OperationsWidget, 
-	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig],      
+	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig, DeviceSearchWidget, DeviceSearchWidgetConfig],      
   entryComponents: [ActiveStatusWidget, ActiveStatusWidgetConfig, DeviceTypesWidget ,DeviceTypesWidgetConfig, 
 	OpenStatusWidget, OpenStatusWidgetConfig, DailyCountWidget, DailyCountWidgetConfig, OperationsWidget,
-	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig],
+	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig, DeviceSearchWidget, DeviceSearchWidgetConfig],
   providers: [{
     provide: HOOK_COMPONENT,                         
     multi: true,
@@ -109,7 +111,7 @@ import { FlipCardModule } from './src/flip-card/flip-card.module';
       configComponent: MonthlyCountWidgetConfig,
     }
   },
-    {
+  {
     provide: HOOK_COMPONENT,                         
     multi: true,
     useValue: {
@@ -118,6 +120,17 @@ import { FlipCardModule } from './src/flip-card/flip-card.module';
       description: 'Ay bazında kaydolan cihaz sayısı grafiğini görmenizi sağlar.',
       component: DeviceNameWidget,                         
       configComponent: DeviceNameWidgetConfig,
+    }
+  },
+  {
+    provide: HOOK_COMPONENT,                         
+    multi: true,
+    useValue: {
+      id: 'device.search.widget',                         
+      label: 'Cihaz Adları',
+      description: 'Cihaz bilgilerini tablodan aratmamıza yarar.',
+      component: DeviceSearchWidget,                         
+      configComponent: DeviceSearchWidgetConfig,
     }
   },
   {
