@@ -127,7 +127,7 @@ import { DeviceSearchWidgetConfig } from './src/deviceSearchWidget/device-search
     multi: true,
     useValue: {
       id: 'device.search.widget',                         
-      label: 'Cihaz Adları',
+      label: 'Cihaz Arama',
       description: 'Cihaz bilgilerini tablodan aratmamıza yarar.',
       component: DeviceSearchWidget,                         
       configComponent: DeviceSearchWidgetConfig,
