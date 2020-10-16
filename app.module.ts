@@ -31,12 +31,21 @@ import { DeviceNameWidgetConfig } from './src/deviceNameWidget/device-name-confi
 import { FlipCardModule } from './src/flip-card/flip-card.module';
 import { DeviceSearchWidget } from './src/deviceSearchWidget/device-search-widget.component';
 import { DeviceSearchWidgetConfig } from './src/deviceSearchWidget/device-search-config.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { HttpClientModule} from '@angular/common/http'
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import { HAMMER_LOADER } from '@angular/platform-browser';
 
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-	RouterModule.forRoot(),
+	  RouterModule.forRoot(),
     NgRouterModule.forRoot([
       ...UPGRADE_ROUTES
     ], { enableTracing: false, useHash: true }),
@@ -46,9 +55,18 @@ import { DeviceSearchWidgetConfig } from './src/deviceSearchWidget/device-search
     NgUpgradeModule,
     ContextDashboardModule,
     FlipCardModule,
-	ChartsModule,
+    ChartsModule,
+    FormsModule,
     // Upgrade module must be the last
-    UpgradeModule
+    UpgradeModule,
+    // @angular/material
+    BrowserModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   declarations: [ActiveStatusWidget, ActiveStatusWidgetConfig, DeviceTypesWidget, DeviceTypesWidgetConfig,
 	OpenStatusWidget, OpenStatusWidgetConfig, DailyCountWidget, DailyCountWidgetConfig, OperationsWidget, 
@@ -143,6 +161,10 @@ import { DeviceSearchWidgetConfig } from './src/deviceSearchWidget/device-search
       component: OperationsWidget,                         
       configComponent: OperationsWidgetConfig,
     }
+  },
+  {
+    provide: HAMMER_LOADER,
+    useValue: () => new Promise(() => {})
   },
   ThemeService,
   ActiveStatusWidgetService,
