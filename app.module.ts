@@ -42,6 +42,7 @@ import {MatSortModule} from '@angular/material/sort';
 import { HAMMER_LOADER } from '@angular/platform-browser';
 import { StatusWidget } from 'src/statusWidget/status-widget.component';
 import { StatusWidgetConfig } from 'src/statusWidget/status-config.component';
+import { StatusWidgetService } from 'src/statusWidget/status-widget.service';
 
 
 @NgModule({
@@ -174,7 +175,8 @@ import { StatusWidgetConfig } from 'src/statusWidget/status-config.component';
   OpenStatusWidgetService,
   DailyCountWidgetService,
   MonthlyCountWidgetService,
-  OperationsWidgetService
+  OperationsWidgetService,
+  StatusWidgetService
   ]
 })
 export class AppModule extends HybridAppModule {
