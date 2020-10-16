@@ -114,6 +114,17 @@ import { StatusWidgetService } from 'src/statusWidget/status-widget.service';
     provide: HOOK_COMPONENT,                         
     multi: true,
     useValue: {
+      id: 'status.widget',                         
+      label: 'Sayaçlarda Vana Durumu 2',
+      description: 'Sayaçların açık ya da kapalı sayılarını gösterir.',
+      component: StatusWidget,                         
+      configComponent: StatusWidgetConfig,
+    }
+  },
+  {
+    provide: HOOK_COMPONENT,                         
+    multi: true,
+    useValue: {
       id: 'daily.count.widget',                         
       label: 'Haftalık Cihaz Kaydı',
       description: 'Haftalık kaydolan cihaz grafiğini görmenizi sağlar.',
