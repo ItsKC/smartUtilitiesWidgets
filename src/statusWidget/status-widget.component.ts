@@ -5,7 +5,7 @@ import { StatusWidgetService } from './status-widget.service'
 @Component({
   selector: 'status-widget',
   templateUrl: './status-widget.html',
-  styleUrls: ['../styles/bootstrap.min.css']
+  styleUrls: ['../styles/bootstrap.min.css', './status-widget.component.css']
 })
 export class StatusWidget {
   @Input() config;
