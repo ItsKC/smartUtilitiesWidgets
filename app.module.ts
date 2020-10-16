@@ -40,6 +40,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import { HAMMER_LOADER } from '@angular/platform-browser';
+import { StatusWidget } from 'src/statusWidget/status-widget.component';
+import { StatusWidgetConfig } from 'src/statusWidget/status-config.component';
 
 
 @NgModule({
@@ -70,10 +72,10 @@ import { HAMMER_LOADER } from '@angular/platform-browser';
   ],
   declarations: [ActiveStatusWidget, ActiveStatusWidgetConfig, DeviceTypesWidget, DeviceTypesWidgetConfig,
 	OpenStatusWidget, OpenStatusWidgetConfig, DailyCountWidget, DailyCountWidgetConfig, OperationsWidget, 
-	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig, DeviceSearchWidget, DeviceSearchWidgetConfig],      
+	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig, DeviceSearchWidget, DeviceSearchWidgetConfig, StatusWidget, StatusWidgetConfig],      
   entryComponents: [ActiveStatusWidget, ActiveStatusWidgetConfig, DeviceTypesWidget ,DeviceTypesWidgetConfig, 
 	OpenStatusWidget, OpenStatusWidgetConfig, DailyCountWidget, DailyCountWidgetConfig, OperationsWidget,
-	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig, DeviceSearchWidget, DeviceSearchWidgetConfig],
+	OperationsWidgetConfig, MonthlyCountWidget, MonthlyCountWidgetConfig, DeviceNameWidget, DeviceNameWidgetConfig, DeviceSearchWidget, DeviceSearchWidgetConfig, StatusWidget, StatusWidgetConfig],
   providers: [{
     provide: HOOK_COMPONENT,                         
     multi: true,
