@@ -1,0 +1,151 @@
+{
+    "heros": [
+        {
+            "id": 1,
+            "name": "Iron Man",
+            "fullName": "Tony Stark",
+            "placeOfBirth": "New York",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 2,
+            "name": "Batman",
+            "fullName": "Terry McGinnis",
+            "placeOfBirth": "Gotham City",
+            "publisher": "DC Comics"
+        },
+        {
+            "id": 3,
+            "name": "Spider-Man",
+            "fullName": "Peter Parker",
+            "placeOfBirth": "New York",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 4,
+            "name": "Venom",
+            "fullName": "Eddie Brock",
+            "placeOfBirth": "New York",
+            "publisher": "Anti-Venom"
+        },
+        {
+            "id": 5,
+            "name": "Deadpool",
+            "fullName": "Wade Wilson",
+            "placeOfBirth": "Canada",
+            "publisher": "Evil Deadpool"
+        },
+        {
+            "id": 6,
+            "name": "Thanos",
+            "fullName": "Tony Stark",
+            "placeOfBirth": "Titan",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 7,
+            "name": "Thor",
+            "fullName": "Thor Odinson",
+            "placeOfBirth": "Asgard",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 8,
+            "name": "Hulk",
+            "fullName": "Bruce Banner",
+            "placeOfBirth": "Asgard",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 9,
+            "name": "Flash",
+            "fullName": "Jay Garrick",
+            "placeOfBirth": "Kansas",
+            "publisher": "DC Comics"
+        },
+        {
+            "id": 10,
+            "name": "Wolverine",
+            "fullName": "Logan",
+            "placeOfBirth": "Canada",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 11,
+            "name": "Iron Man",
+            "fullName": "Tony Stark",
+            "placeOfBirth": "New York",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 12,
+            "name": "Batman",
+            "fullName": "Terry McGinnis",
+            "placeOfBirth": "Gotham City",
+            "publisher": "DC Comics"
+        },
+        {
+            "id": 13,
+            "name": "Spider-Man",
+            "fullName": "Peter Parker",
+            "placeOfBirth": "New York",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 14,
+            "name": "Venom",
+            "fullName": "Eddie Brock",
+            "placeOfBirth": "New York",
+            "publisher": "Anti-Venom"
+        },
+        {
+            "id": 15,
+            "name": "Deadpool",
+            "fullName": "Wade Wilson",
+            "placeOfBirth": "Canada",
+            "publisher": "Evil Deadpool"
+        },
+        {
+            "id": 16,
+            "name": "Thanos",
+            "fullName": "Tony Stark",
+            "placeOfBirth": "Titan",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 17,
+            "name": "Thor",
+            "fullName": "Thor Odinson",
+            "placeOfBirth": "Asgard",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 18,
+            "name": "Hulk",
+            "fullName": "Bruce Banner",
+            "placeOfBirth": "Asgard",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 19,
+            "name": "Flash",
+            "fullName": "Jay Garrick",
+            "placeOfBirth": "Kansas",
+            "publisher": "DC Comics"
+        },
+        {
+            "id": 20,
+            "name": "Wolverine",
+            "fullName": "Logan",
+            "placeOfBirth": "Canada",
+            "publisher": "Marvel Comics"
+        },
+        {
+            "id": 21,
+            "name": "Wolverine",
+            "fullName": "Logan",
+            "placeOfBirth": "Canada",
+            "publisher": "Marvel Comics"
+        }
+    ]
+}
