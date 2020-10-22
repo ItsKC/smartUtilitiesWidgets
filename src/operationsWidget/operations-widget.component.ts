@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, Input  } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { OperationsWidgetService } from './operations-widget.service'
 import { Router } from '@angular/router';
+import { AlertService } from '@c8y/ngx-components';
 
 @Component({
   selector: 'operations-widget',
@@ -25,7 +26,7 @@ export class OperationsWidget {
   private isHidden: boolean;
   private creditValue: string;
   
-    constructor( private service: OperationsWidgetService, private router: Router ) {
+    constructor( private service: OperationsWidgetService, private router: Router, private alert: AlertService) {
 	  // Load last measurements on every creation of this object
 		this.operationList = [{
 			id: 1,
