@@ -1,37 +1,39 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <div>
-            {{devArr[0]}}
-        </div>
-    </div>
-    <div class="panel-body">
-        <div class="panel-content-center">
-            <label>İş Emirleri</label>
-            &nbsp;
-            <div class="input-group workorders">
-                <select class="form-control" [(ngModel)]="selectedStatus" (ngModelChange)=onChange($event.name)
-                    aria-label="Default" aria-describedby="inputGroup-sizing-default" type="text">
-                    <option *ngFor="let s of operationList" [ngValue]="s">{{s.name}}</option>
-                </select>
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                <span class="input-group-btn createworkorders">
-                    <button class="btn btn-primary" type="submit" (click)="sendOperation()">İş Emri Oluştur</button>
-                </span>
-            </div>
-            <label *ngIf="!isHidden">Kredi Miktarı </label>
-            <div class="input-group loanamount" *ngIf="!isHidden">
-                <input [(ngModel)]="creditValue" class="form-control hiddenform" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default" type="text">
+<div class="col-md-12" style="margin-top: 35px; margin-left: 0px; margin-right: 0px;">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div>
+                {{devArr[0]}}
             </div>
         </div>
-    </div>
+        <div class="panel-body">
+            <div class="panel-content-center">
+                <label>İş Emirleri</label>
+                &nbsp;
+                <div class="input-group workorders">
+                    <select class="form-control" [(ngModel)]="selectedStatus" (ngModelChange)=onChange($event.name)
+                        aria-label="Default" aria-describedby="inputGroup-sizing-default" type="text">
+                        <option *ngFor="let s of operationList" [ngValue]="s">{{s.name}}</option>
+                    </select>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                    <span class="input-group-btn createworkorders">
+                        <button class="btn btn-primary" type="submit" (click)="sendOperation()">İş Emri Oluştur</button>
+                    </span>
+                </div>
+                <label *ngIf="!isHidden">Kredi Miktarı </label>
+                <div class="input-group loanamount" *ngIf="!isHidden">
+                    <input [(ngModel)]="creditValue" class="form-control hiddenform" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default" type="text">
+                </div>
+            </div>
+        </div>
 
-    <div class="panel-footer">
-        <div>
-            <p *ngIf="isHidden"><span>Cihaz Vanası: </span><b>{{devArr[1]}}</b></p>
-            <p *ngIf="!isHidden"><span>Mevcut Kredi: </span><b>{{devCredit}}</b></p>
+        <div class="panel-footer">
+            <div>
+                <p *ngIf="isHidden"><span>Cihaz Vanası: </span><b>{{devArr[1]}}</b></p>
+                <p *ngIf="!isHidden"><span>Mevcut Kredi: </span><b>{{devCredit}}</b></p>
+            </div>
         </div>
     </div>
 </div>
