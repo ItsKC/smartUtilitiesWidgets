@@ -65,12 +65,15 @@ export class OperationsWidget {
 	sendOperation(){
 		if (this.selectedStatus.id == 1){
 			this.service.createOpenValveOperation(this.source);
+			this.alert.success(this.devArr[0] + ' cihazının vanası başarılı bir şekilde açılmıştır.');
 		}
 		else if(this.selectedStatus.id == 2){
 			this.service.createCloseValveOperation(this.source);
+			this.alert.success(this.devArr[0] + ' cihazının vanası başarılı bir şekilde kapatılmıştır.');
 		}
 		else{
 			this.service.createCreditOperation(this.source,parseInt(this.creditValue));
+			this.alert.success(this.devArr[0] + ' cihazına ' + this.creditValue +' kredi yüklenmiştir.');
 		}
 	}
 	
